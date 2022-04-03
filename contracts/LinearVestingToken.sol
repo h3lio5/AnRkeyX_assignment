@@ -98,6 +98,8 @@ contract LinearVestingToken {
         if (msg.sender != _beneficiary.to) revert RedeemerNotAuthorized();
 
         uint128 _amountToRedeem;
+        // vesting time unlocked, which means that entire amount can be redeemed - alreadyClaimed amount
+        // If called repeatedly after vesting unlocked, ONLY 0 tokens get redeemed.
         if (
             uint96(block.timestamp) >=
             _beneficiary.startTime + _beneficiary.duration
@@ -110,7 +112,9 @@ contract LinearVestingToken {
                 msg.sender,
                 uint256(_amountToRedeem)
             );
-        } else {
+        }
+        // Before the vesting schedule's unlock time.
+        else {
             // Compute the amount of tokens that can be redeemed: totalUnlocked - alreadyClaimed
             _amountToRedeem =
                 ((_beneficiary.totalAmount *
