@@ -1,0 +1,46 @@
+{
+  "contracts": {
+    "ERC20": "7476cff3d07a79eab0bb248abbd9fe228c1dca15",
+    "LinearVestingToken": "a1538078cf08a650b0dd6729bd14f4f366ae616e"
+  },
+  "tests": {
+    "tests/test_mint.py": {
+      "coverage": false,
+      "isolated": false,
+      "results": "...",
+      "sha1": "37d3b9a3077f97265c7700cd0aae23919c1ead16",
+      "txhash": [
+        "3099853ac2b0e082603bc47f1431cda95e73208b",
+        "93e2c84bdcfe819eb94594538d6e2a692245b500"
+      ]
+    }
+  },
+  "tx": {
+    "3099853ac2b0e082603bc47f1431cda95e73208b": {
+      "LinearVestingToken": {
+        "0": [
+          [
+            5
+          ],
+          [
+            15
+          ],
+          []
+        ]
+      }
+    },
+    "93e2c84bdcfe819eb94594538d6e2a692245b500": {
+      "LinearVestingToken": {
+        "0": [
+          [
+            5
+          ],
+          [
+            15
+          ],
+          []
+        ]
+      }
+    }
+  }
+}

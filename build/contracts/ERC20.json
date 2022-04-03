@@ -1,0 +1,7921 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_symbol",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_decimals",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transfer",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/ERC20.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/ERC20.sol",
+    "exportedSymbols": {
+      "ERC20": [
+        157
+      ]
+    },
+    "id": 158,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".11"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:0"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ERC20",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 157,
+        "linearizedBaseContracts": [
+          157
+        ],
+        "name": "ERC20",
+        "nameLocation": "154:5:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7,
+            "mutability": "mutable",
+            "name": "_allowances",
+            "nameLocation": "247:11:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "191:67:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_uint256_$_$",
+              "typeString": "mapping(address => mapping(address => uint256))"
+            },
+            "typeName": {
+              "id": 6,
+              "keyType": {
+                "id": 2,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "199:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "191:47:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_uint256_$_$",
+                "typeString": "mapping(address => mapping(address => uint256))"
+              },
+              "valueType": {
+                "id": 5,
+                "keyType": {
+                  "id": 3,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "218:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "nodeType": "Mapping",
+                "src": "210:27:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                  "typeString": "mapping(address => uint256)"
+                },
+                "valueType": {
+                  "id": 4,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "229:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                }
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 11,
+            "mutability": "mutable",
+            "name": "_balances",
+            "nameLocation": "300:9:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "264:45:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 10,
+              "keyType": {
+                "id": 8,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "272:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "264:27:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 9,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "283:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "functionSelector": "06fdde03",
+            "id": 13,
+            "mutability": "mutable",
+            "name": "name",
+            "nameLocation": "330:4:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "316:18:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 12,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "316:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "95d89b41",
+            "id": 15,
+            "mutability": "mutable",
+            "name": "symbol",
+            "nameLocation": "354:6:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "340:20:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 14,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "340:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "313ce567",
+            "id": 17,
+            "mutability": "mutable",
+            "name": "decimals",
+            "nameLocation": "382:8:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "367:23:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 16,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "367:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "18160ddd",
+            "id": 19,
+            "mutability": "mutable",
+            "name": "totalSupply",
+            "nameLocation": "411:11:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 157,
+            "src": "396:26:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 18,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "396:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 40,
+              "nodeType": "Block",
+              "src": "534:85:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 30,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 28,
+                      "name": "name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 13,
+                      "src": "544:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 29,
+                      "name": "_name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21,
+                      "src": "551:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "544:12:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 31,
+                  "nodeType": "ExpressionStatement",
+                  "src": "544:12:0"
+                },
+                {
+                  "expression": {
+                    "id": 34,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 32,
+                      "name": "symbol",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 15,
+                      "src": "566:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage",
+                        "typeString": "string storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 33,
+                      "name": "_symbol",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 23,
+                      "src": "575:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "566:16:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage",
+                      "typeString": "string storage ref"
+                    }
+                  },
+                  "id": 35,
+                  "nodeType": "ExpressionStatement",
+                  "src": "566:16:0"
+                },
+                {
+                  "expression": {
+                    "id": 38,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 36,
+                      "name": "decimals",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 17,
+                      "src": "592:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 37,
+                      "name": "_decimals",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 25,
+                      "src": "603:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "592:20:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 39,
+                  "nodeType": "ExpressionStatement",
+                  "src": "592:20:0"
+                }
+              ]
+            },
+            "id": 41,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 26,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 21,
+                  "mutability": "mutable",
+                  "name": "_name",
+                  "nameLocation": "464:5:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41,
+                  "src": "450:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 20,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "450:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 23,
+                  "mutability": "mutable",
+                  "name": "_symbol",
+                  "nameLocation": "493:7:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41,
+                  "src": "479:21:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "479:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25,
+                  "mutability": "mutable",
+                  "name": "_decimals",
+                  "nameLocation": "518:9:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 41,
+                  "src": "510:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 24,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "510:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "440:93:0"
+            },
+            "returnParameters": {
+              "id": 27,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "534:0:0"
+            },
+            "scope": 157,
+            "src": "429:190:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 57,
+              "nodeType": "Block",
+              "src": "748:79:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 51,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 46,
+                        "name": "_balances",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "758:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 49,
+                      "indexExpression": {
+                        "expression": {
+                          "id": 47,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "768:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 48,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "768:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "758:21:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "id": 50,
+                      "name": "amount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 43,
+                      "src": "783:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "758:31:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 52,
+                  "nodeType": "ExpressionStatement",
+                  "src": "758:31:0"
+                },
+                {
+                  "expression": {
+                    "id": 55,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 53,
+                      "name": "totalSupply",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 19,
+                      "src": "799:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "id": 54,
+                      "name": "amount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 43,
+                      "src": "814:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "799:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 56,
+                  "nodeType": "ExpressionStatement",
+                  "src": "799:21:0"
+                }
+              ]
+            },
+            "functionSelector": "a0712d68",
+            "id": 58,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "720:4:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 44,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 43,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "733:6:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 58,
+                  "src": "725:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 42,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "725:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "724:16:0"
+            },
+            "returnParameters": {
+              "id": 45,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "748:0:0"
+            },
+            "scope": 157,
+            "src": "711:116:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 69,
+              "nodeType": "Block",
+              "src": "901:42:0",
+              "statements": [
+                {
+                  "expression": {
+                    "baseExpression": {
+                      "id": 65,
+                      "name": "_balances",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11,
+                      "src": "918:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 67,
+                    "indexExpression": {
+                      "id": 66,
+                      "name": "account",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 60,
+                      "src": "928:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "918:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 64,
+                  "id": 68,
+                  "nodeType": "Return",
+                  "src": "911:25:0"
+                }
+              ]
+            },
+            "functionSelector": "70a08231",
+            "id": 70,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "balanceOf",
+            "nameLocation": "842:9:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 61,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nameLocation": "860:7:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "852:15:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "852:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "851:17:0"
+            },
+            "returnParameters": {
+              "id": 64,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 63,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 70,
+                  "src": "892:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 62,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "892:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "891:9:0"
+            },
+            "scope": 157,
+            "src": "833:110:0",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 88,
+              "nodeType": "Block",
+              "src": "1019:71:0",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "expression": {
+                          "id": 80,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "1039:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 81,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1039:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 82,
+                        "name": "to",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 72,
+                        "src": "1051:2:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 83,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 74,
+                        "src": "1055:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 79,
+                      "name": "_transfer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 156,
+                      "src": "1029:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,address,uint256)"
+                      }
+                    },
+                    "id": 84,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1029:33:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 85,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1029:33:0"
+                },
+                {
+                  "expression": {
+                    "hexValue": "74727565",
+                    "id": 86,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1079:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 78,
+                  "id": 87,
+                  "nodeType": "Return",
+                  "src": "1072:11:0"
+                }
+              ]
+            },
+            "functionSelector": "a9059cbb",
+            "id": 89,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transfer",
+            "nameLocation": "958:8:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 75,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 72,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "975:2:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "967:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 71,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "967:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 74,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "987:6:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "979:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 73,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "979:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "966:28:0"
+            },
+            "returnParameters": {
+              "id": 78,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 77,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "1013:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 76,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1013:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1012:6:0"
+            },
+            "scope": 157,
+            "src": "949:141:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 117,
+              "nodeType": "Block",
+              "src": "1214:145:0",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 107,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "baseExpression": {
+                          "id": 100,
+                          "name": "_allowances",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 7,
+                          "src": "1255:11:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_mapping$_t_address_$_t_uint256_$_$",
+                            "typeString": "mapping(address => mapping(address => uint256))"
+                          }
+                        },
+                        "id": 104,
+                        "indexExpression": {
+                          "id": 101,
+                          "name": "from",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 91,
+                          "src": "1267:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "1255:17:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 105,
+                      "indexExpression": {
+                        "expression": {
+                          "id": 102,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -15,
+                          "src": "1273:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 103,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "src": "1273:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1255:29:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "-=",
+                    "rightHandSide": {
+                      "id": 106,
+                      "name": "amount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 95,
+                      "src": "1288:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1255:39:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 108,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1255:39:0"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 110,
+                        "name": "from",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 91,
+                        "src": "1314:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 111,
+                        "name": "to",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 93,
+                        "src": "1320:2:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 112,
+                        "name": "amount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 95,
+                        "src": "1324:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 109,
+                      "name": "_transfer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 156,
+                      "src": "1304:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,address,uint256)"
+                      }
+                    },
+                    "id": 113,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1304:27:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 114,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1304:27:0"
+                },
+                {
+                  "expression": {
+                    "hexValue": "74727565",
+                    "id": 115,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1348:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 99,
+                  "id": 116,
+                  "nodeType": "Return",
+                  "src": "1341:11:0"
+                }
+              ]
+            },
+            "functionSelector": "23b872dd",
+            "id": 118,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferFrom",
+            "nameLocation": "1105:12:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 96,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 91,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "1135:4:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 118,
+                  "src": "1127:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 90,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1127:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 93,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "1157:2:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 118,
+                  "src": "1149:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 92,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1149:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 95,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1177:6:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 118,
+                  "src": "1169:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 94,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1169:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1117:72:0"
+            },
+            "returnParameters": {
+              "id": 99,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 98,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 118,
+                  "src": "1208:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 97,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1208:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1207:6:0"
+            },
+            "scope": 157,
+            "src": "1096:263:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 155,
+              "nodeType": "Block",
+              "src": "1465:288:0",
+              "statements": [
+                {
+                  "assignments": [
+                    128
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 128,
+                      "mutability": "mutable",
+                      "name": "_fromBalance",
+                      "nameLocation": "1483:12:0",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 155,
+                      "src": "1475:20:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 127,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1475:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 132,
+                  "initialValue": {
+                    "baseExpression": {
+                      "id": 129,
+                      "name": "_balances",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11,
+                      "src": "1498:9:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                        "typeString": "mapping(address => uint256)"
+                      }
+                    },
+                    "id": 131,
+                    "indexExpression": {
+                      "id": 130,
+                      "name": "from",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 120,
+                      "src": "1508:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "1498:15:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1475:38:0"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 136,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 134,
+                          "name": "_fromBalance",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 128,
+                          "src": "1544:12:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
+                          "id": 135,
+                          "name": "amount",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 124,
+                          "src": "1560:6:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1544:22:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "hexValue": "45524332303a207472616e7366657220616d6f756e7420657863656564732062616c616e6365",
+                        "id": 137,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1580:40:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_4107e8a8b9e94bf8ff83080ddec1c0bffe897ebc2241b89d44f66b3d274088b6",
+                          "typeString": "literal_string \"ERC20: transfer amount exceeds balance\""
+                        },
+                        "value": "ERC20: transfer amount exceeds balance"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_4107e8a8b9e94bf8ff83080ddec1c0bffe897ebc2241b89d44f66b3d274088b6",
+                          "typeString": "literal_string \"ERC20: transfer amount exceeds balance\""
+                        }
+                      ],
+                      "id": 133,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "1523:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 138,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1523:107:0",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 139,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1523:107:0"
+                },
+                {
+                  "id": 148,
+                  "nodeType": "UncheckedBlock",
+                  "src": "1640:74:0",
+                  "statements": [
+                    {
+                      "expression": {
+                        "id": 146,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftHandSide": {
+                          "baseExpression": {
+                            "id": 140,
+                            "name": "_balances",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11,
+                            "src": "1664:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                              "typeString": "mapping(address => uint256)"
+                            }
+                          },
+                          "id": 142,
+                          "indexExpression": {
+                            "id": 141,
+                            "name": "from",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 120,
+                            "src": "1674:4:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": true,
+                          "nodeType": "IndexAccess",
+                          "src": "1664:15:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "Assignment",
+                        "operator": "=",
+                        "rightHandSide": {
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 145,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "id": 143,
+                            "name": "_fromBalance",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 128,
+                            "src": "1682:12:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "-",
+                          "rightExpression": {
+                            "id": 144,
+                            "name": "amount",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 124,
+                            "src": "1697:6:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1682:21:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "src": "1664:39:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "id": 147,
+                      "nodeType": "ExpressionStatement",
+                      "src": "1664:39:0"
+                    }
+                  ]
+                },
+                {
+                  "expression": {
+                    "id": 153,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "baseExpression": {
+                        "id": 149,
+                        "name": "_balances",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "1723:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 151,
+                      "indexExpression": {
+                        "id": 150,
+                        "name": "to",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 122,
+                        "src": "1733:2:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "1723:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "id": 152,
+                      "name": "amount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 124,
+                      "src": "1740:6:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1723:23:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 154,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1723:23:0"
+                }
+              ]
+            },
+            "id": 156,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_transfer",
+            "nameLocation": "1374:9:0",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 125,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 120,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nameLocation": "1401:4:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 156,
+                  "src": "1393:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 119,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1393:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 122,
+                  "mutability": "mutable",
+                  "name": "to",
+                  "nameLocation": "1423:2:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 156,
+                  "src": "1415:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 121,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1415:7:0",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 124,
+                  "mutability": "mutable",
+                  "name": "amount",
+                  "nameLocation": "1443:6:0",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 156,
+                  "src": "1435:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 123,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1435:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1383:72:0"
+            },
+            "returnParameters": {
+              "id": 126,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1465:0:0"
+            },
+            "scope": 157,
+            "src": "1365:388:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 158,
+        "src": "145:1610:0",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1724:0"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5060405161077f38038061077f83398101604081905261002f916101bd565b8251610042906002906020860190610062565b508151610056906003906020850190610062565b50600455506102649050565b82805461006e90610229565b90600052602060002090601f01602090048101928261009057600085556100d6565b82601f106100a957805160ff19168380011785556100d6565b828001600101855582156100d6579182015b828111156100d65782518255916020019190600101906100bb565b506100e29291506100e6565b5090565b5b808211156100e257600081556001016100e7565b634e487b7160e01b600052604160045260246000fd5b600082601f83011261012257600080fd5b81516001600160401b038082111561013c5761013c6100fb565b604051601f8301601f19908116603f01168101908282118183101715610164576101646100fb565b8160405283815260209250868385880101111561018057600080fd5b600091505b838210156101a25785820183015181830184015290820190610185565b838211156101b35760008385830101525b9695505050505050565b6000806000606084860312156101d257600080fd5b83516001600160401b03808211156101e957600080fd5b6101f587838801610111565b9450602086015191508082111561020b57600080fd5b5061021886828701610111565b925050604084015190509250925092565b600181811c9082168061023d57607f821691505b6020821081141561025e57634e487b7160e01b600052602260045260246000fd5b50919050565b61050c806102736000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c806370a082311161005b57806370a08231146100ee57806395d89b4114610117578063a0712d681461011f578063a9059cbb1461013457600080fd5b806306fdde031461008d57806318160ddd146100ab57806323b872dd146100c2578063313ce567146100e5575b600080fd5b610095610147565b6040516100a29190610344565b60405180910390f35b6100b460055481565b6040519081526020016100a2565b6100d56100d03660046103b5565b6101d5565b60405190151581526020016100a2565b6100b460045481565b6100b46100fc3660046103f1565b6001600160a01b031660009081526001602052604090205490565b610095610223565b61013261012d366004610413565b610230565b005b6100d561014236600461042c565b610270565b6002805461015490610456565b80601f016020809104026020016040519081016040528092919081815260200182805461018090610456565b80156101cd5780601f106101a2576101008083540402835291602001916101cd565b820191906000526020600020905b8154815290600101906020018083116101b057829003601f168201915b505050505081565b6001600160a01b0383166000908152602081815260408083203384529091528120805483919083906102089084906104a7565b909155506102199050848484610286565b5060019392505050565b6003805461015490610456565b336000908152600160205260408120805483929061024f9084906104be565b92505081905550806005600082825461026891906104be565b909155505050565b600061027d338484610286565b50600192915050565b6001600160a01b038316600090815260016020526040902054818110156103025760405162461bcd60e51b815260206004820152602660248201527f45524332303a207472616e7366657220616d6f756e7420657863656564732062604482015265616c616e636560d01b606482015260840160405180910390fd5b6001600160a01b038085166000908152600160205260408082208585039055918516815290812080548492906103399084906104be565b909155505050505050565b600060208083528351808285015260005b8181101561037157858101830151858201604001528201610355565b81811115610383576000604083870101525b50601f01601f1916929092016040019392505050565b80356001600160a01b03811681146103b057600080fd5b919050565b6000806000606084860312156103ca57600080fd5b6103d384610399565b92506103e160208501610399565b9150604084013590509250925092565b60006020828403121561040357600080fd5b61040c82610399565b9392505050565b60006020828403121561042557600080fd5b5035919050565b6000806040838503121561043f57600080fd5b61044883610399565b946020939093013593505050565b600181811c9082168061046a57607f821691505b6020821081141561048b57634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052601160045260246000fd5b6000828210156104b9576104b9610491565b500390565b600082198211156104d1576104d1610491565b50019056fea26469706673582212205cd3c83feecebf427e7dbbe06db5841173270bc08dc1430966d0d668d9a57d3c64736f6c634300080b0033",
+  "bytecodeSha1": "7476cff3d07a79eab0bb248abbd9fe228c1dca15",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.11+commit.d7f03943"
+  },
+  "contractName": "ERC20",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "ERC20._transfer": {
+          "11": [
+            1544,
+            1566,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "ERC20._transfer": {
+          "8": [
+            1523,
+            1630
+          ],
+          "9": [
+            1664,
+            1703
+          ],
+          "10": [
+            1723,
+            1746
+          ]
+        },
+        "ERC20.balanceOf": {
+          "0": [
+            911,
+            936
+          ]
+        },
+        "ERC20.mint": {
+          "4": [
+            758,
+            789
+          ],
+          "5": [
+            799,
+            820
+          ]
+        },
+        "ERC20.transfer": {
+          "6": [
+            1029,
+            1062
+          ],
+          "7": [
+            1072,
+            1083
+          ]
+        },
+        "ERC20.transferFrom": {
+          "1": [
+            1255,
+            1294
+          ],
+          "2": [
+            1304,
+            1331
+          ],
+          "3": [
+            1341,
+            1352
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100885760003560e01c806370a082311161005b57806370a08231146100ee57806395d89b4114610117578063a0712d681461011f578063a9059cbb1461013457600080fd5b806306fdde031461008d57806318160ddd146100ab57806323b872dd146100c2578063313ce567146100e5575b600080fd5b610095610147565b6040516100a29190610344565b60405180910390f35b6100b460055481565b6040519081526020016100a2565b6100d56100d03660046103b5565b6101d5565b60405190151581526020016100a2565b6100b460045481565b6100b46100fc3660046103f1565b6001600160a01b031660009081526001602052604090205490565b610095610223565b61013261012d366004610413565b610230565b005b6100d561014236600461042c565b610270565b6002805461015490610456565b80601f016020809104026020016040519081016040528092919081815260200182805461018090610456565b80156101cd5780601f106101a2576101008083540402835291602001916101cd565b820191906000526020600020905b8154815290600101906020018083116101b057829003601f168201915b505050505081565b6001600160a01b0383166000908152602081815260408083203384529091528120805483919083906102089084906104a7565b909155506102199050848484610286565b5060019392505050565b6003805461015490610456565b336000908152600160205260408120805483929061024f9084906104be565b92505081905550806005600082825461026891906104be565b909155505050565b600061027d338484610286565b50600192915050565b6001600160a01b038316600090815260016020526040902054818110156103025760405162461bcd60e51b815260206004820152602660248201527f45524332303a207472616e7366657220616d6f756e7420657863656564732062604482015265616c616e636560d01b606482015260840160405180910390fd5b6001600160a01b038085166000908152600160205260408082208585039055918516815290812080548492906103399084906104be565b909155505050505050565b600060208083528351808285015260005b8181101561037157858101830151858201604001528201610355565b81811115610383576000604083870101525b50601f01601f1916929092016040019392505050565b80356001600160a01b03811681146103b057600080fd5b919050565b6000806000606084860312156103ca57600080fd5b6103d384610399565b92506103e160208501610399565b9150604084013590509250925092565b60006020828403121561040357600080fd5b61040c82610399565b9392505050565b60006020828403121561042557600080fd5b5035919050565b6000806040838503121561043f57600080fd5b61044883610399565b946020939093013593505050565b600181811c9082168061046a57607f821691505b6020821081141561048b57634e487b7160e01b600052602260045260246000fd5b50919050565b634e487b7160e01b600052601160045260246000fd5b6000828210156104b9576104b9610491565b500390565b600082198211156104d1576104d1610491565b50019056fea26469706673582212205cd3c83feecebf427e7dbbe06db5841173270bc08dc1430966d0d668d9a57d3c64736f6c634300080b0033",
+  "deployedSourceMap": "145:1610:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;316:18;;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;396:26;;;;;;;;;762:25:1;;;750:2;735:18;396:26:0;616:177:1;1096:263:0;;;;;;:::i;:::-;;:::i;:::-;;;1474:14:1;;1467:22;1449:41;;1437:2;1422:18;1096:263:0;1309:187:1;367:23:0;;;;;;833:110;;;;;;:::i;:::-;-1:-1:-1;;;;;918:18:0;892:7;918:18;;;:9;:18;;;;;;;833:110;340:20;;;:::i;711:116::-;;;;;;:::i;:::-;;:::i;:::-;;949:141;;;;;;:::i;:::-;;:::i;316:18::-;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1096:263::-;-1:-1:-1;;;;;1255:17:0;;1208:4;1255:17;;;;;;;;;;;1273:10;1255:29;;;;;;;:39;;1288:6;;1255:29;1208:4;;1255:39;;1288:6;;1255:39;:::i;:::-;;;;-1:-1:-1;1304:27:0;;-1:-1:-1;1314:4:0;1320:2;1324:6;1304:9;:27::i;:::-;-1:-1:-1;1348:4:0;1096:263;;;;;:::o;340:20::-;;;;;;;:::i;711:116::-;768:10;758:21;;;;:9;:21;;;;;:31;;783:6;;758:21;:31;;783:6;;758:31;:::i;:::-;;;;;;;;814:6;799:11;;:21;;;;;;;:::i;:::-;;;;-1:-1:-1;;;711:116:0:o;949:141::-;1013:4;1029:33;1039:10;1051:2;1055:6;1029:9;:33::i;:::-;-1:-1:-1;1079:4:0;949:141;;;;:::o;1365:388::-;-1:-1:-1;;;;;1498:15:0;;1475:20;1498:15;;;:9;:15;;;;;;1544:22;;;;1523:107;;;;-1:-1:-1;;;1523:107:0;;3118:2:1;1523:107:0;;;3100:21:1;3157:2;3137:18;;;3130:30;3196:34;3176:18;;;3169:62;-1:-1:-1;;;3247:18:1;;;3240:36;3293:19;;1523:107:0;;;;;;;;-1:-1:-1;;;;;1664:15:0;;;;;;;:9;:15;;;;;;1682:21;;;1664:39;;1723:13;;;;;;;;:23;;1697:6;;1664:15;1723:23;;1697:6;;1723:23;:::i;:::-;;;;-1:-1:-1;;;;;;1365:388:0:o;14:597:1:-;126:4;155:2;184;173:9;166:21;216:6;210:13;259:6;254:2;243:9;239:18;232:34;284:1;294:140;308:6;305:1;302:13;294:140;;;403:14;;;399:23;;393:30;369:17;;;388:2;365:26;358:66;323:10;;294:140;;;452:6;449:1;446:13;443:91;;;522:1;517:2;508:6;497:9;493:22;489:31;482:42;443:91;-1:-1:-1;595:2:1;574:15;-1:-1:-1;;570:29:1;555:45;;;;602:2;551:54;;14:597;-1:-1:-1;;;14:597:1:o;798:173::-;866:20;;-1:-1:-1;;;;;915:31:1;;905:42;;895:70;;961:1;958;951:12;895:70;798:173;;;:::o;976:328::-;1053:6;1061;1069;1122:2;1110:9;1101:7;1097:23;1093:32;1090:52;;;1138:1;1135;1128:12;1090:52;1161:29;1180:9;1161:29;:::i;:::-;1151:39;;1209:38;1243:2;1232:9;1228:18;1209:38;:::i;:::-;1199:48;;1294:2;1283:9;1279:18;1266:32;1256:42;;976:328;;;;;:::o;1501:186::-;1560:6;1613:2;1601:9;1592:7;1588:23;1584:32;1581:52;;;1629:1;1626;1619:12;1581:52;1652:29;1671:9;1652:29;:::i;:::-;1642:39;1501:186;-1:-1:-1;;;1501:186:1:o;1692:180::-;1751:6;1804:2;1792:9;1783:7;1779:23;1775:32;1772:52;;;1820:1;1817;1810:12;1772:52;-1:-1:-1;1843:23:1;;1692:180;-1:-1:-1;1692:180:1:o;1877:254::-;1945:6;1953;2006:2;1994:9;1985:7;1981:23;1977:32;1974:52;;;2022:1;2019;2012:12;1974:52;2045:29;2064:9;2045:29;:::i;:::-;2035:39;2121:2;2106:18;;;;2093:32;;-1:-1:-1;;;1877:254:1:o;2136:380::-;2215:1;2211:12;;;;2258;;;2279:61;;2333:4;2325:6;2321:17;2311:27;;2279:61;2386:2;2378:6;2375:14;2355:18;2352:38;2349:161;;;2432:10;2427:3;2423:20;2420:1;2413:31;2467:4;2464:1;2457:15;2495:4;2492:1;2485:15;2349:161;;2136:380;;;:::o;2521:127::-;2582:10;2577:3;2573:20;2570:1;2563:31;2613:4;2610:1;2603:15;2637:4;2634:1;2627:15;2653:125;2693:4;2721:1;2718;2715:8;2712:34;;;2726:18;;:::i;:::-;-1:-1:-1;2763:9:1;;2653:125::o;2783:128::-;2823:3;2854:1;2850:6;2847:1;2844:13;2841:39;;;2860:18;;:::i;:::-;-1:-1:-1;2896:9:1;;2783:128::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    145,
+    1755
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x88 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x70A08231 GT PUSH2 0x5B JUMPI DUP1 PUSH4 0x70A08231 EQ PUSH2 0xEE JUMPI DUP1 PUSH4 0x95D89B41 EQ PUSH2 0x117 JUMPI DUP1 PUSH4 0xA0712D68 EQ PUSH2 0x11F JUMPI DUP1 PUSH4 0xA9059CBB EQ PUSH2 0x134 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 PUSH4 0x6FDDE03 EQ PUSH2 0x8D JUMPI DUP1 PUSH4 0x18160DDD EQ PUSH2 0xAB JUMPI DUP1 PUSH4 0x23B872DD EQ PUSH2 0xC2 JUMPI DUP1 PUSH4 0x313CE567 EQ PUSH2 0xE5 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x95 PUSH2 0x147 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH2 0xA2 SWAP2 SWAP1 PUSH2 0x344 JUMP JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH2 0xB4 PUSH1 0x5 SLOAD DUP2 JUMP JUMPDEST PUSH1 0x40 MLOAD SWAP1 DUP2 MSTORE PUSH1 0x20 ADD PUSH2 0xA2 JUMP JUMPDEST PUSH2 0xD5 PUSH2 0xD0 CALLDATASIZE PUSH1 0x4 PUSH2 0x3B5 JUMP JUMPDEST PUSH2 0x1D5 JUMP JUMPDEST PUSH1 0x40 MLOAD SWAP1 ISZERO ISZERO DUP2 MSTORE PUSH1 0x20 ADD PUSH2 0xA2 JUMP JUMPDEST PUSH2 0xB4 PUSH1 0x4 SLOAD DUP2 JUMP JUMPDEST PUSH2 0xB4 PUSH2 0xFC CALLDATASIZE PUSH1 0x4 PUSH2 0x3F1 JUMP JUMPDEST PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x1 PUSH1 0x20 MSTORE PUSH1 0x40 SWAP1 KECCAK256 SLOAD SWAP1 JUMP JUMPDEST PUSH2 0x95 PUSH2 0x223 JUMP JUMPDEST PUSH2 0x132 PUSH2 0x12D CALLDATASIZE PUSH1 0x4 PUSH2 0x413 JUMP JUMPDEST PUSH2 0x230 JUMP JUMPDEST STOP JUMPDEST PUSH2 0xD5 PUSH2 0x142 CALLDATASIZE PUSH1 0x4 PUSH2 0x42C JUMP JUMPDEST PUSH2 0x270 JUMP JUMPDEST PUSH1 0x2 DUP1 SLOAD PUSH2 0x154 SWAP1 PUSH2 0x456 JUMP JUMPDEST DUP1 PUSH1 0x1F ADD PUSH1 0x20 DUP1 SWAP2 DIV MUL PUSH1 0x20 ADD PUSH1 0x40 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 SWAP3 SWAP2 SWAP1 DUP2 DUP2 MSTORE PUSH1 0x20 ADD DUP3 DUP1 SLOAD PUSH2 0x180 SWAP1 PUSH2 0x456 JUMP JUMPDEST DUP1 ISZERO PUSH2 0x1CD JUMPI DUP1 PUSH1 0x1F LT PUSH2 0x1A2 JUMPI PUSH2 0x100 DUP1 DUP4 SLOAD DIV MUL DUP4 MSTORE SWAP2 PUSH1 0x20 ADD SWAP2 PUSH2 0x1CD JUMP JUMPDEST DUP3 ADD SWAP2 SWAP1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 KECCAK256 SWAP1 JUMPDEST DUP2 SLOAD DUP2 MSTORE SWAP1 PUSH1 0x1 ADD SWAP1 PUSH1 0x20 ADD DUP1 DUP4 GT PUSH2 0x1B0 JUMPI DUP3 SWAP1 SUB PUSH1 0x1F AND DUP3 ADD SWAP2 JUMPDEST POP POP POP POP POP DUP2 JUMP JUMPDEST PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP4 AND PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x20 DUP2 DUP2 MSTORE PUSH1 0x40 DUP1 DUP4 KECCAK256 CALLER DUP5 MSTORE SWAP1 SWAP2 MSTORE DUP2 KECCAK256 DUP1 SLOAD DUP4 SWAP2 SWAP1 DUP4 SWAP1 PUSH2 0x208 SWAP1 DUP5 SWAP1 PUSH2 0x4A7 JUMP JUMPDEST SWAP1 SWAP2 SSTORE POP PUSH2 0x219 SWAP1 POP DUP5 DUP5 DUP5 PUSH2 0x286 JUMP JUMPDEST POP PUSH1 0x1 SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x3 DUP1 SLOAD PUSH2 0x154 SWAP1 PUSH2 0x456 JUMP JUMPDEST CALLER PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x1 PUSH1 0x20 MSTORE PUSH1 0x40 DUP2 KECCAK256 DUP1 SLOAD DUP4 SWAP3 SWAP1 PUSH2 0x24F SWAP1 DUP5 SWAP1 PUSH2 0x4BE JUMP JUMPDEST SWAP3 POP POP DUP2 SWAP1 SSTORE POP DUP1 PUSH1 0x5 PUSH1 0x0 DUP3 DUP3 SLOAD PUSH2 0x268 SWAP2 SWAP1 PUSH2 0x4BE JUMP JUMPDEST SWAP1 SWAP2 SSTORE POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH2 0x27D CALLER DUP5 DUP5 PUSH2 0x286 JUMP JUMPDEST POP PUSH1 0x1 SWAP3 SWAP2 POP POP JUMP JUMPDEST PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP4 AND PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x1 PUSH1 0x20 MSTORE PUSH1 0x40 SWAP1 KECCAK256 SLOAD DUP2 DUP2 LT ISZERO PUSH2 0x302 JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x26 PUSH1 0x24 DUP3 ADD MSTORE PUSH32 0x45524332303A207472616E7366657220616D6F756E7420657863656564732062 PUSH1 0x44 DUP3 ADD MSTORE PUSH6 0x616C616E6365 PUSH1 0xD0 SHL PUSH1 0x64 DUP3 ADD MSTORE PUSH1 0x84 ADD PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 REVERT JUMPDEST PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP1 DUP6 AND PUSH1 0x0 SWAP1 DUP2 MSTORE PUSH1 0x1 PUSH1 0x20 MSTORE PUSH1 0x40 DUP1 DUP3 KECCAK256 DUP6 DUP6 SUB SWAP1 SSTORE SWAP2 DUP6 AND DUP2 MSTORE SWAP1 DUP2 KECCAK256 DUP1 SLOAD DUP5 SWAP3 SWAP1 PUSH2 0x339 SWAP1 DUP5 SWAP1 PUSH2 0x4BE JUMP JUMPDEST SWAP1 SWAP2 SSTORE POP POP POP POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP1 DUP4 MSTORE DUP4 MLOAD DUP1 DUP3 DUP6 ADD MSTORE PUSH1 0x0 JUMPDEST DUP2 DUP2 LT ISZERO PUSH2 0x371 JUMPI DUP6 DUP2 ADD DUP4 ADD MLOAD DUP6 DUP3 ADD PUSH1 0x40 ADD MSTORE DUP3 ADD PUSH2 0x355 JUMP JUMPDEST DUP2 DUP2 GT ISZERO PUSH2 0x383 JUMPI PUSH1 0x0 PUSH1 0x40 DUP4 DUP8 ADD ADD MSTORE JUMPDEST POP PUSH1 0x1F ADD PUSH1 0x1F NOT AND SWAP3 SWAP1 SWAP3 ADD PUSH1 0x40 ADD SWAP4 SWAP3 POP POP POP JUMP JUMPDEST DUP1 CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND DUP2 EQ PUSH2 0x3B0 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP2 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x0 PUSH1 0x60 DUP5 DUP7 SUB SLT ISZERO PUSH2 0x3CA JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x3D3 DUP5 PUSH2 0x399 JUMP JUMPDEST SWAP3 POP PUSH2 0x3E1 PUSH1 0x20 DUP6 ADD PUSH2 0x399 JUMP JUMPDEST SWAP2 POP PUSH1 0x40 DUP5 ADD CALLDATALOAD SWAP1 POP SWAP3 POP SWAP3 POP SWAP3 JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x403 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x40C DUP3 PUSH2 0x399 JUMP JUMPDEST SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x20 DUP3 DUP5 SUB SLT ISZERO PUSH2 0x425 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD SWAP2 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x40 DUP4 DUP6 SUB SLT ISZERO PUSH2 0x43F JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x448 DUP4 PUSH2 0x399 JUMP JUMPDEST SWAP5 PUSH1 0x20 SWAP4 SWAP1 SWAP4 ADD CALLDATALOAD SWAP4 POP POP POP JUMP JUMPDEST PUSH1 0x1 DUP2 DUP2 SHR SWAP1 DUP3 AND DUP1 PUSH2 0x46A JUMPI PUSH1 0x7F DUP3 AND SWAP2 POP JUMPDEST PUSH1 0x20 DUP3 LT DUP2 EQ ISZERO PUSH2 0x48B JUMPI PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x22 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST POP SWAP2 SWAP1 POP JUMP JUMPDEST PUSH4 0x4E487B71 PUSH1 0xE0 SHL PUSH1 0x0 MSTORE PUSH1 0x11 PUSH1 0x4 MSTORE PUSH1 0x24 PUSH1 0x0 REVERT JUMPDEST PUSH1 0x0 DUP3 DUP3 LT ISZERO PUSH2 0x4B9 JUMPI PUSH2 0x4B9 PUSH2 0x491 JUMP JUMPDEST POP SUB SWAP1 JUMP JUMPDEST PUSH1 0x0 DUP3 NOT DUP3 GT ISZERO PUSH2 0x4D1 JUMPI PUSH2 0x4D1 PUSH2 0x491 JUMP JUMPDEST POP ADD SWAP1 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0x5C 0xD3 0xC8 EXTCODEHASH 0xEE 0xCE 0xBF TIMESTAMP PUSH31 0x7DBBE06DB5841173270BC08DC1430966D0D668D9A57D3C64736F6C63430008 SIGNEXTEND STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "CALLVALUE",
+      "path": "0"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x88"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "SHR",
+      "path": "0"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x70A08231"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x5B"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x70A08231"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xEE"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x95D89B41"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x117"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xA0712D68"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "72": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x11F"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "77": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0xA9059CBB"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "83": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x134"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "89": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "90": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "91": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "92": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "93": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x6FDDE03"
+    },
+    "98": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "99": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x8D"
+    },
+    "102": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "103": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "104": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x18160DDD"
+    },
+    "109": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "110": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xAB"
+    },
+    "113": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "114": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "115": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x23B872DD"
+    },
+    "120": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "121": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xC2"
+    },
+    "124": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "125": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "126": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x313CE567"
+    },
+    "131": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "EQ",
+      "path": "0"
+    },
+    "132": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xE5"
+    },
+    "135": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "136": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "137": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "139": {
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "140": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        145,
+        1755
+      ],
+      "op": "REVERT",
+      "path": "0"
+    },
+    "141": {
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "142": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x95"
+    },
+    "145": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x147"
+    },
+    "148": {
+      "fn": null,
+      "jump": "i",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "149": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "150": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "152": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "153": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA2"
+    },
+    "156": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "157": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "158": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x344"
+    },
+    "161": {
+      "fn": null,
+      "jump": "i",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "162": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "163": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "165": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "166": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "167": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "168": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "169": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "170": {
+      "fn": null,
+      "offset": [
+        316,
+        334
+      ],
+      "op": "RETURN",
+      "path": "0"
+    },
+    "171": {
+      "offset": [
+        396,
+        422
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "172": {
+      "fn": null,
+      "offset": [
+        396,
+        422
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xB4"
+    },
+    "175": {
+      "fn": null,
+      "offset": [
+        396,
+        422
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x5"
+    },
+    "177": {
+      "fn": null,
+      "offset": [
+        396,
+        422
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "178": {
+      "fn": null,
+      "offset": [
+        396,
+        422
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "179": {
+      "fn": null,
+      "offset": [
+        396,
+        422
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "180": {
+      "fn": null,
+      "offset": [
+        396,
+        422
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "181": {
+      "fn": null,
+      "offset": [
+        396,
+        422
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "183": {
+      "fn": null,
+      "offset": [
+        396,
+        422
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "184": {
+      "op": "SWAP1"
+    },
+    "185": {
+      "op": "DUP2"
+    },
+    "186": {
+      "op": "MSTORE"
+    },
+    "187": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "189": {
+      "op": "ADD"
+    },
+    "190": {
+      "offset": [
+        396,
+        422
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA2"
+    },
+    "193": {
+      "op": "JUMP"
+    },
+    "194": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "195": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xD5"
+    },
+    "198": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xD0"
+    },
+    "201": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "202": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "204": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3B5"
+    },
+    "207": {
+      "fn": "ERC20.transferFrom",
+      "jump": "i",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "208": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "209": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1D5"
+    },
+    "212": {
+      "fn": "ERC20.transferFrom",
+      "jump": "i",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "213": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "214": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "216": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "217": {
+      "op": "SWAP1"
+    },
+    "218": {
+      "op": "ISZERO"
+    },
+    "219": {
+      "op": "ISZERO"
+    },
+    "220": {
+      "op": "DUP2"
+    },
+    "221": {
+      "op": "MSTORE"
+    },
+    "222": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "224": {
+      "op": "ADD"
+    },
+    "225": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xA2"
+    },
+    "228": {
+      "op": "JUMP"
+    },
+    "229": {
+      "offset": [
+        367,
+        390
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "230": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        367,
+        390
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xB4"
+    },
+    "233": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        367,
+        390
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "235": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        367,
+        390
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "236": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        367,
+        390
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "237": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        367,
+        390
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "238": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        833,
+        943
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "239": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        833,
+        943
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xB4"
+    },
+    "242": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        833,
+        943
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xFC"
+    },
+    "245": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        833,
+        943
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "246": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        833,
+        943
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "248": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        833,
+        943
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x3F1"
+    },
+    "251": {
+      "fn": "ERC20.balanceOf",
+      "jump": "i",
+      "offset": [
+        833,
+        943
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "252": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        833,
+        943
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "253": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "255": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "257": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "259": {
+      "op": "SHL"
+    },
+    "260": {
+      "op": "SUB"
+    },
+    "261": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        936
+      ],
+      "op": "AND",
+      "path": "0",
+      "statement": 0
+    },
+    "262": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        892,
+        899
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "264": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        936
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "265": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        936
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "266": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        936
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "267": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        927
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "269": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        936
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "271": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        936
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "272": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        936
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "274": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        936
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "275": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        936
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "276": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        936
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "277": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        918,
+        936
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "278": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        833,
+        943
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "279": {
+      "offset": [
+        340,
+        360
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "280": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        340,
+        360
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x95"
+    },
+    "283": {
+      "fn": "ERC20.balanceOf",
+      "offset": [
+        340,
+        360
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x223"
+    },
+    "286": {
+      "fn": "ERC20.balanceOf",
+      "jump": "i",
+      "offset": [
+        340,
+        360
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "287": {
+      "fn": "ERC20.mint",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "288": {
+      "fn": "ERC20.mint",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x132"
+    },
+    "291": {
+      "fn": "ERC20.mint",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x12D"
+    },
+    "294": {
+      "fn": "ERC20.mint",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "295": {
+      "fn": "ERC20.mint",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "297": {
+      "fn": "ERC20.mint",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x413"
+    },
+    "300": {
+      "fn": "ERC20.mint",
+      "jump": "i",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "301": {
+      "fn": "ERC20.mint",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "302": {
+      "fn": "ERC20.mint",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x230"
+    },
+    "305": {
+      "fn": "ERC20.mint",
+      "jump": "i",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "306": {
+      "fn": "ERC20.mint",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "307": {
+      "fn": "ERC20.mint",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "308": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "309": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0xD5"
+    },
+    "312": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x142"
+    },
+    "315": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "CALLDATASIZE",
+      "path": "0"
+    },
+    "316": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "318": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x42C"
+    },
+    "321": {
+      "fn": "ERC20.transfer",
+      "jump": "i",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "322": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "323": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x270"
+    },
+    "326": {
+      "fn": "ERC20.transfer",
+      "jump": "i",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "327": {
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "328": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x2"
+    },
+    "330": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "331": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "332": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x154"
+    },
+    "335": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "336": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x456"
+    },
+    "339": {
+      "fn": "ERC20.transfer",
+      "jump": "i",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "340": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "341": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "342": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "344": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "345": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "347": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "348": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "349": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "350": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "351": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "353": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "354": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "356": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "357": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "358": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "359": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "360": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "362": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "363": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "364": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "365": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "366": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "367": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "368": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "369": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "370": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "372": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "373": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "374": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "375": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "376": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x180"
+    },
+    "379": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "380": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x456"
+    },
+    "383": {
+      "fn": "ERC20.transfer",
+      "jump": "i",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "384": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "385": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "386": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "387": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1CD"
+    },
+    "390": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "391": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "392": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "394": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "395": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1A2"
+    },
+    "398": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "399": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x100"
+    },
+    "402": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "403": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "404": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "405": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DIV",
+      "path": "0"
+    },
+    "406": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "MUL",
+      "path": "0"
+    },
+    "407": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "408": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "409": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "410": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "412": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "413": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "414": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1CD"
+    },
+    "417": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "418": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "419": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "420": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "421": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "422": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "423": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "425": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "426": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "428": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "430": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "431": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "432": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "433": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "434": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "435": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "436": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "437": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "438": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "440": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "441": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "442": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "444": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "445": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "446": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "447": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "GT",
+      "path": "0"
+    },
+    "448": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1B0"
+    },
+    "451": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "452": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "453": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "454": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "455": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "457": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "458": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "459": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "460": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "461": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "462": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "463": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "464": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "465": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "466": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "467": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "468": {
+      "fn": "ERC20.transfer",
+      "jump": "o",
+      "offset": [
+        316,
+        334
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "469": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "470": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "472": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "474": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "476": {
+      "op": "SHL"
+    },
+    "477": {
+      "op": "SUB"
+    },
+    "478": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "DUP4",
+      "path": "0",
+      "statement": 1
+    },
+    "479": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "480": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1208,
+        1212
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "482": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "483": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "484": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "485": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "487": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "488": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "489": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "490": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "492": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "493": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "494": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1272
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "495": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1273,
+        1283
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "496": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1284
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "497": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1284
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "498": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1284
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "499": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1284
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "500": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1284
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "501": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1284
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "502": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1284
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "503": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1294
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "504": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1294
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "505": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1288,
+        1294
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "506": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1288,
+        1294
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "507": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1284
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "508": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1208,
+        1212
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "509": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1208,
+        1212
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "510": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1294
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x208"
+    },
+    "513": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1294
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "514": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1288,
+        1294
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "515": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1288,
+        1294
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "516": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1294
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4A7"
+    },
+    "519": {
+      "fn": "ERC20.transferFrom",
+      "jump": "i",
+      "offset": [
+        1255,
+        1294
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "520": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1294
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "521": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1294
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "522": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1294
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "523": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1255,
+        1294
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "524": {
+      "op": "POP"
+    },
+    "525": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1304,
+        1331
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "statement": 2,
+      "value": "0x219"
+    },
+    "528": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1304,
+        1331
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "529": {
+      "op": "POP"
+    },
+    "530": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1314,
+        1318
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "531": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1320,
+        1322
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "532": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1324,
+        1330
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "533": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1304,
+        1313
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x286"
+    },
+    "536": {
+      "fn": "ERC20.transferFrom",
+      "jump": "i",
+      "offset": [
+        1304,
+        1331
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "537": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1304,
+        1331
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "538": {
+      "op": "POP"
+    },
+    "539": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1348,
+        1352
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 3,
+      "value": "0x1"
+    },
+    "541": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "SWAP4",
+      "path": "0"
+    },
+    "542": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "543": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "544": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "545": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "546": {
+      "fn": "ERC20.transferFrom",
+      "jump": "o",
+      "offset": [
+        1096,
+        1359
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "547": {
+      "offset": [
+        340,
+        360
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "548": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        340,
+        360
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "550": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        340,
+        360
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "551": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        340,
+        360
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "552": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        340,
+        360
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x154"
+    },
+    "555": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        340,
+        360
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "556": {
+      "fn": "ERC20.transferFrom",
+      "offset": [
+        340,
+        360
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x456"
+    },
+    "559": {
+      "fn": "ERC20.transferFrom",
+      "jump": "i",
+      "offset": [
+        340,
+        360
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "560": {
+      "fn": "ERC20.mint",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "561": {
+      "fn": "ERC20.mint",
+      "offset": [
+        768,
+        778
+      ],
+      "op": "CALLER",
+      "path": "0",
+      "statement": 4
+    },
+    "562": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "564": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "565": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "566": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "567": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        767
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "569": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "571": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "572": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "574": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "575": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "576": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "577": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "578": {
+      "fn": "ERC20.mint",
+      "offset": [
+        783,
+        789
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "579": {
+      "fn": "ERC20.mint",
+      "offset": [
+        783,
+        789
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "580": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        779
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "581": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x24F"
+    },
+    "584": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "585": {
+      "fn": "ERC20.mint",
+      "offset": [
+        783,
+        789
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "586": {
+      "fn": "ERC20.mint",
+      "offset": [
+        783,
+        789
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "587": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4BE"
+    },
+    "590": {
+      "fn": "ERC20.mint",
+      "jump": "i",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "591": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "592": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "593": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "594": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "595": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "596": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "597": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "598": {
+      "fn": "ERC20.mint",
+      "offset": [
+        758,
+        789
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "599": {
+      "fn": "ERC20.mint",
+      "offset": [
+        814,
+        820
+      ],
+      "op": "DUP1",
+      "path": "0",
+      "statement": 5
+    },
+    "600": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        810
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x5"
+    },
+    "602": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        810
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "604": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "605": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "606": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "607": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x268"
+    },
+    "610": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "611": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "612": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4BE"
+    },
+    "615": {
+      "fn": "ERC20.mint",
+      "jump": "i",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "616": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "617": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "618": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "619": {
+      "fn": "ERC20.mint",
+      "offset": [
+        799,
+        820
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "620": {
+      "op": "POP"
+    },
+    "621": {
+      "op": "POP"
+    },
+    "622": {
+      "op": "POP"
+    },
+    "623": {
+      "fn": "ERC20.mint",
+      "jump": "o",
+      "offset": [
+        711,
+        827
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "624": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "625": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        1013,
+        1017
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "627": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        1029,
+        1062
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "statement": 6,
+      "value": "0x27D"
+    },
+    "630": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        1039,
+        1049
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "631": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        1051,
+        1053
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "632": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        1055,
+        1061
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "633": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        1029,
+        1038
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x286"
+    },
+    "636": {
+      "fn": "ERC20.transfer",
+      "jump": "i",
+      "offset": [
+        1029,
+        1062
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "637": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        1029,
+        1062
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "638": {
+      "op": "POP"
+    },
+    "639": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        1079,
+        1083
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 7,
+      "value": "0x1"
+    },
+    "641": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "642": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "643": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "644": {
+      "fn": "ERC20.transfer",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "645": {
+      "fn": "ERC20.transfer",
+      "jump": "o",
+      "offset": [
+        949,
+        1090
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "646": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1365,
+        1753
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "647": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "649": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "651": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "653": {
+      "op": "SHL"
+    },
+    "654": {
+      "op": "SUB"
+    },
+    "655": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1513
+      ],
+      "op": "DUP4",
+      "path": "0"
+    },
+    "656": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1513
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "657": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1475,
+        1495
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "659": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1513
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "660": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1513
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "661": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1513
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "662": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1507
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "664": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1513
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "666": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1513
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "667": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1513
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "669": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1513
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "670": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1513
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "671": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1498,
+        1513
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "672": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1544,
+        1566
+      ],
+      "op": "DUP2",
+      "path": "0",
+      "statement": 8
+    },
+    "673": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1544,
+        1566
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "674": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1544,
+        1566
+      ],
+      "op": "LT",
+      "path": "0"
+    },
+    "675": {
+      "branch": 11,
+      "fn": "ERC20._transfer",
+      "offset": [
+        1544,
+        1566
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "676": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x302"
+    },
+    "679": {
+      "branch": 11,
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "680": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "682": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "683": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "687": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "689": {
+      "op": "SHL"
+    },
+    "690": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "691": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "692": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "694": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x4"
+    },
+    "696": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "697": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "698": {
+      "op": "MSTORE"
+    },
+    "699": {
+      "op": "PUSH1",
+      "value": "0x26"
+    },
+    "701": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "703": {
+      "op": "DUP3"
+    },
+    "704": {
+      "op": "ADD"
+    },
+    "705": {
+      "op": "MSTORE"
+    },
+    "706": {
+      "op": "PUSH32",
+      "value": "0x45524332303A207472616E7366657220616D6F756E7420657863656564732062"
+    },
+    "739": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "741": {
+      "op": "DUP3"
+    },
+    "742": {
+      "op": "ADD"
+    },
+    "743": {
+      "op": "MSTORE"
+    },
+    "744": {
+      "op": "PUSH6",
+      "value": "0x616C616E6365"
+    },
+    "751": {
+      "op": "PUSH1",
+      "value": "0xD0"
+    },
+    "753": {
+      "op": "SHL"
+    },
+    "754": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "756": {
+      "op": "DUP3"
+    },
+    "757": {
+      "op": "ADD"
+    },
+    "758": {
+      "op": "MSTORE"
+    },
+    "759": {
+      "op": "PUSH1",
+      "value": "0x84"
+    },
+    "761": {
+      "op": "ADD"
+    },
+    "762": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "764": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "765": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "766": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "767": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "768": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "769": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "REVERT",
+      "optimizer_revert": true,
+      "path": "0"
+    },
+    "770": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1523,
+        1630
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "771": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "773": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "775": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "777": {
+      "op": "SHL"
+    },
+    "778": {
+      "op": "SUB"
+    },
+    "779": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "DUP1",
+      "path": "0",
+      "statement": 9
+    },
+    "780": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "781": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "782": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "784": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "785": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "786": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "787": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1673
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x1"
+    },
+    "789": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "791": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "792": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "794": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "795": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "796": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "797": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1682,
+        1703
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "798": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1682,
+        1703
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "799": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1682,
+        1703
+      ],
+      "op": "SUB",
+      "path": "0"
+    },
+    "800": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1703
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "801": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1703
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "802": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1736
+      ],
+      "op": "SWAP2",
+      "path": "0",
+      "statement": 10
+    },
+    "803": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1736
+      ],
+      "op": "DUP6",
+      "path": "0"
+    },
+    "804": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1736
+      ],
+      "op": "AND",
+      "path": "0"
+    },
+    "805": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1736
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "806": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1736
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "807": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1736
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "808": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1736
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "809": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1736
+      ],
+      "op": "KECCAK256",
+      "path": "0"
+    },
+    "810": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1746
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "811": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1746
+      ],
+      "op": "SLOAD",
+      "path": "0"
+    },
+    "812": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1697,
+        1703
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "813": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1697,
+        1703
+      ],
+      "op": "SWAP3",
+      "path": "0"
+    },
+    "814": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1664,
+        1679
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "815": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1746
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x339"
+    },
+    "818": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1746
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "819": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1697,
+        1703
+      ],
+      "op": "DUP5",
+      "path": "0"
+    },
+    "820": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1697,
+        1703
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "821": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1746
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x4BE"
+    },
+    "824": {
+      "fn": "ERC20._transfer",
+      "jump": "i",
+      "offset": [
+        1723,
+        1746
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "825": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1746
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "826": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1746
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "827": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1746
+      ],
+      "op": "SWAP2",
+      "path": "0"
+    },
+    "828": {
+      "fn": "ERC20._transfer",
+      "offset": [
+        1723,
+        1746
+      ],
+      "op": "SSTORE",
+      "path": "0"
+    },
+    "829": {
+      "op": "POP"
+    },
+    "830": {
+      "op": "POP"
+    },
+    "831": {
+      "op": "POP"
+    },
+    "832": {
+      "op": "POP"
+    },
+    "833": {
+      "op": "POP"
+    },
+    "834": {
+      "op": "POP"
+    },
+    "835": {
+      "fn": "ERC20._transfer",
+      "jump": "o",
+      "offset": [
+        1365,
+        1753
+      ],
+      "op": "JUMP",
+      "path": "0"
+    },
+    "836": {
+      "op": "JUMPDEST"
+    },
+    "837": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "839": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "841": {
+      "op": "DUP1"
+    },
+    "842": {
+      "op": "DUP4"
+    },
+    "843": {
+      "op": "MSTORE"
+    },
+    "844": {
+      "op": "DUP4"
+    },
+    "845": {
+      "op": "MLOAD"
+    },
+    "846": {
+      "op": "DUP1"
+    },
+    "847": {
+      "op": "DUP3"
+    },
+    "848": {
+      "op": "DUP6"
+    },
+    "849": {
+      "op": "ADD"
+    },
+    "850": {
+      "op": "MSTORE"
+    },
+    "851": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "853": {
+      "op": "JUMPDEST"
+    },
+    "854": {
+      "op": "DUP2"
+    },
+    "855": {
+      "op": "DUP2"
+    },
+    "856": {
+      "op": "LT"
+    },
+    "857": {
+      "op": "ISZERO"
+    },
+    "858": {
+      "op": "PUSH2",
+      "value": "0x371"
+    },
+    "861": {
+      "op": "JUMPI"
+    },
+    "862": {
+      "op": "DUP6"
+    },
+    "863": {
+      "op": "DUP2"
+    },
+    "864": {
+      "op": "ADD"
+    },
+    "865": {
+      "op": "DUP4"
+    },
+    "866": {
+      "op": "ADD"
+    },
+    "867": {
+      "op": "MLOAD"
+    },
+    "868": {
+      "op": "DUP6"
+    },
+    "869": {
+      "op": "DUP3"
+    },
+    "870": {
+      "op": "ADD"
+    },
+    "871": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "873": {
+      "op": "ADD"
+    },
+    "874": {
+      "op": "MSTORE"
+    },
+    "875": {
+      "op": "DUP3"
+    },
+    "876": {
+      "op": "ADD"
+    },
+    "877": {
+      "op": "PUSH2",
+      "value": "0x355"
+    },
+    "880": {
+      "op": "JUMP"
+    },
+    "881": {
+      "op": "JUMPDEST"
+    },
+    "882": {
+      "op": "DUP2"
+    },
+    "883": {
+      "op": "DUP2"
+    },
+    "884": {
+      "op": "GT"
+    },
+    "885": {
+      "op": "ISZERO"
+    },
+    "886": {
+      "op": "PUSH2",
+      "value": "0x383"
+    },
+    "889": {
+      "op": "JUMPI"
+    },
+    "890": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "892": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "894": {
+      "op": "DUP4"
+    },
+    "895": {
+      "op": "DUP8"
+    },
+    "896": {
+      "op": "ADD"
+    },
+    "897": {
+      "op": "ADD"
+    },
+    "898": {
+      "op": "MSTORE"
+    },
+    "899": {
+      "op": "JUMPDEST"
+    },
+    "900": {
+      "op": "POP"
+    },
+    "901": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "903": {
+      "op": "ADD"
+    },
+    "904": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "906": {
+      "op": "NOT"
+    },
+    "907": {
+      "op": "AND"
+    },
+    "908": {
+      "op": "SWAP3"
+    },
+    "909": {
+      "op": "SWAP1"
+    },
+    "910": {
+      "op": "SWAP3"
+    },
+    "911": {
+      "op": "ADD"
+    },
+    "912": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "914": {
+      "op": "ADD"
+    },
+    "915": {
+      "op": "SWAP4"
+    },
+    "916": {
+      "op": "SWAP3"
+    },
+    "917": {
+      "op": "POP"
+    },
+    "918": {
+      "op": "POP"
+    },
+    "919": {
+      "op": "POP"
+    },
+    "920": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "921": {
+      "op": "JUMPDEST"
+    },
+    "922": {
+      "op": "DUP1"
+    },
+    "923": {
+      "op": "CALLDATALOAD"
+    },
+    "924": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "926": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "928": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "930": {
+      "op": "SHL"
+    },
+    "931": {
+      "op": "SUB"
+    },
+    "932": {
+      "op": "DUP2"
+    },
+    "933": {
+      "op": "AND"
+    },
+    "934": {
+      "op": "DUP2"
+    },
+    "935": {
+      "op": "EQ"
+    },
+    "936": {
+      "op": "PUSH2",
+      "value": "0x3B0"
+    },
+    "939": {
+      "op": "JUMPI"
+    },
+    "940": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "942": {
+      "op": "DUP1"
+    },
+    "943": {
+      "op": "REVERT"
+    },
+    "944": {
+      "op": "JUMPDEST"
+    },
+    "945": {
+      "op": "SWAP2"
+    },
+    "946": {
+      "op": "SWAP1"
+    },
+    "947": {
+      "op": "POP"
+    },
+    "948": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "949": {
+      "op": "JUMPDEST"
+    },
+    "950": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "952": {
+      "op": "DUP1"
+    },
+    "953": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "955": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "957": {
+      "op": "DUP5"
+    },
+    "958": {
+      "op": "DUP7"
+    },
+    "959": {
+      "op": "SUB"
+    },
+    "960": {
+      "op": "SLT"
+    },
+    "961": {
+      "op": "ISZERO"
+    },
+    "962": {
+      "op": "PUSH2",
+      "value": "0x3CA"
+    },
+    "965": {
+      "op": "JUMPI"
+    },
+    "966": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "968": {
+      "op": "DUP1"
+    },
+    "969": {
+      "op": "REVERT"
+    },
+    "970": {
+      "op": "JUMPDEST"
+    },
+    "971": {
+      "op": "PUSH2",
+      "value": "0x3D3"
+    },
+    "974": {
+      "op": "DUP5"
+    },
+    "975": {
+      "op": "PUSH2",
+      "value": "0x399"
+    },
+    "978": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "979": {
+      "op": "JUMPDEST"
+    },
+    "980": {
+      "op": "SWAP3"
+    },
+    "981": {
+      "op": "POP"
+    },
+    "982": {
+      "op": "PUSH2",
+      "value": "0x3E1"
+    },
+    "985": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "987": {
+      "op": "DUP6"
+    },
+    "988": {
+      "op": "ADD"
+    },
+    "989": {
+      "op": "PUSH2",
+      "value": "0x399"
+    },
+    "992": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "993": {
+      "op": "JUMPDEST"
+    },
+    "994": {
+      "op": "SWAP2"
+    },
+    "995": {
+      "op": "POP"
+    },
+    "996": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "998": {
+      "op": "DUP5"
+    },
+    "999": {
+      "op": "ADD"
+    },
+    "1000": {
+      "op": "CALLDATALOAD"
+    },
+    "1001": {
+      "op": "SWAP1"
+    },
+    "1002": {
+      "op": "POP"
+    },
+    "1003": {
+      "op": "SWAP3"
+    },
+    "1004": {
+      "op": "POP"
+    },
+    "1005": {
+      "op": "SWAP3"
+    },
+    "1006": {
+      "op": "POP"
+    },
+    "1007": {
+      "op": "SWAP3"
+    },
+    "1008": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1009": {
+      "op": "JUMPDEST"
+    },
+    "1010": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1012": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1014": {
+      "op": "DUP3"
+    },
+    "1015": {
+      "op": "DUP5"
+    },
+    "1016": {
+      "op": "SUB"
+    },
+    "1017": {
+      "op": "SLT"
+    },
+    "1018": {
+      "op": "ISZERO"
+    },
+    "1019": {
+      "op": "PUSH2",
+      "value": "0x403"
+    },
+    "1022": {
+      "op": "JUMPI"
+    },
+    "1023": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1025": {
+      "op": "DUP1"
+    },
+    "1026": {
+      "op": "REVERT"
+    },
+    "1027": {
+      "op": "JUMPDEST"
+    },
+    "1028": {
+      "op": "PUSH2",
+      "value": "0x40C"
+    },
+    "1031": {
+      "op": "DUP3"
+    },
+    "1032": {
+      "op": "PUSH2",
+      "value": "0x399"
+    },
+    "1035": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1036": {
+      "op": "JUMPDEST"
+    },
+    "1037": {
+      "op": "SWAP4"
+    },
+    "1038": {
+      "op": "SWAP3"
+    },
+    "1039": {
+      "op": "POP"
+    },
+    "1040": {
+      "op": "POP"
+    },
+    "1041": {
+      "op": "POP"
+    },
+    "1042": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1043": {
+      "op": "JUMPDEST"
+    },
+    "1044": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1046": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1048": {
+      "op": "DUP3"
+    },
+    "1049": {
+      "op": "DUP5"
+    },
+    "1050": {
+      "op": "SUB"
+    },
+    "1051": {
+      "op": "SLT"
+    },
+    "1052": {
+      "op": "ISZERO"
+    },
+    "1053": {
+      "op": "PUSH2",
+      "value": "0x425"
+    },
+    "1056": {
+      "op": "JUMPI"
+    },
+    "1057": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1059": {
+      "op": "DUP1"
+    },
+    "1060": {
+      "op": "REVERT"
+    },
+    "1061": {
+      "op": "JUMPDEST"
+    },
+    "1062": {
+      "op": "POP"
+    },
+    "1063": {
+      "op": "CALLDATALOAD"
+    },
+    "1064": {
+      "op": "SWAP2"
+    },
+    "1065": {
+      "op": "SWAP1"
+    },
+    "1066": {
+      "op": "POP"
+    },
+    "1067": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1068": {
+      "op": "JUMPDEST"
+    },
+    "1069": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1071": {
+      "op": "DUP1"
+    },
+    "1072": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "1074": {
+      "op": "DUP4"
+    },
+    "1075": {
+      "op": "DUP6"
+    },
+    "1076": {
+      "op": "SUB"
+    },
+    "1077": {
+      "op": "SLT"
+    },
+    "1078": {
+      "op": "ISZERO"
+    },
+    "1079": {
+      "op": "PUSH2",
+      "value": "0x43F"
+    },
+    "1082": {
+      "op": "JUMPI"
+    },
+    "1083": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1085": {
+      "op": "DUP1"
+    },
+    "1086": {
+      "op": "REVERT"
+    },
+    "1087": {
+      "op": "JUMPDEST"
+    },
+    "1088": {
+      "op": "PUSH2",
+      "value": "0x448"
+    },
+    "1091": {
+      "op": "DUP4"
+    },
+    "1092": {
+      "op": "PUSH2",
+      "value": "0x399"
+    },
+    "1095": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1096": {
+      "op": "JUMPDEST"
+    },
+    "1097": {
+      "op": "SWAP5"
+    },
+    "1098": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1100": {
+      "op": "SWAP4"
+    },
+    "1101": {
+      "op": "SWAP1"
+    },
+    "1102": {
+      "op": "SWAP4"
+    },
+    "1103": {
+      "op": "ADD"
+    },
+    "1104": {
+      "op": "CALLDATALOAD"
+    },
+    "1105": {
+      "op": "SWAP4"
+    },
+    "1106": {
+      "op": "POP"
+    },
+    "1107": {
+      "op": "POP"
+    },
+    "1108": {
+      "op": "POP"
+    },
+    "1109": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1110": {
+      "op": "JUMPDEST"
+    },
+    "1111": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1113": {
+      "op": "DUP2"
+    },
+    "1114": {
+      "op": "DUP2"
+    },
+    "1115": {
+      "op": "SHR"
+    },
+    "1116": {
+      "op": "SWAP1"
+    },
+    "1117": {
+      "op": "DUP3"
+    },
+    "1118": {
+      "op": "AND"
+    },
+    "1119": {
+      "op": "DUP1"
+    },
+    "1120": {
+      "op": "PUSH2",
+      "value": "0x46A"
+    },
+    "1123": {
+      "op": "JUMPI"
+    },
+    "1124": {
+      "op": "PUSH1",
+      "value": "0x7F"
+    },
+    "1126": {
+      "op": "DUP3"
+    },
+    "1127": {
+      "op": "AND"
+    },
+    "1128": {
+      "op": "SWAP2"
+    },
+    "1129": {
+      "op": "POP"
+    },
+    "1130": {
+      "op": "JUMPDEST"
+    },
+    "1131": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "1133": {
+      "op": "DUP3"
+    },
+    "1134": {
+      "op": "LT"
+    },
+    "1135": {
+      "op": "DUP2"
+    },
+    "1136": {
+      "op": "EQ"
+    },
+    "1137": {
+      "op": "ISZERO"
+    },
+    "1138": {
+      "op": "PUSH2",
+      "value": "0x48B"
+    },
+    "1141": {
+      "op": "JUMPI"
+    },
+    "1142": {
+      "op": "PUSH4",
+      "value": "0x4E487B71"
+    },
+    "1147": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "1149": {
+      "op": "SHL"
+    },
+    "1150": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1152": {
+      "op": "MSTORE"
+    },
+    "1153": {
+      "op": "PUSH1",
+      "value": "0x22"
+    },
+    "1155": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1157": {
+      "op": "MSTORE"
+    },
+    "1158": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "1160": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1162": {
+      "op": "REVERT"
+    },
+    "1163": {
+      "op": "JUMPDEST"
+    },
+    "1164": {
+      "op": "POP"
+    },
+    "1165": {
+      "op": "SWAP2"
+    },
+    "1166": {
+      "op": "SWAP1"
+    },
+    "1167": {
+      "op": "POP"
+    },
+    "1168": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1169": {
+      "op": "JUMPDEST"
+    },
+    "1170": {
+      "op": "PUSH4",
+      "value": "0x4E487B71"
+    },
+    "1175": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "1177": {
+      "op": "SHL"
+    },
+    "1178": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1180": {
+      "op": "MSTORE"
+    },
+    "1181": {
+      "op": "PUSH1",
+      "value": "0x11"
+    },
+    "1183": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "1185": {
+      "op": "MSTORE"
+    },
+    "1186": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "1188": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1190": {
+      "op": "REVERT"
+    },
+    "1191": {
+      "op": "JUMPDEST"
+    },
+    "1192": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1194": {
+      "op": "DUP3"
+    },
+    "1195": {
+      "op": "DUP3"
+    },
+    "1196": {
+      "op": "LT"
+    },
+    "1197": {
+      "op": "ISZERO"
+    },
+    "1198": {
+      "op": "PUSH2",
+      "value": "0x4B9"
+    },
+    "1201": {
+      "op": "JUMPI"
+    },
+    "1202": {
+      "op": "PUSH2",
+      "value": "0x4B9"
+    },
+    "1205": {
+      "op": "PUSH2",
+      "value": "0x491"
+    },
+    "1208": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1209": {
+      "op": "JUMPDEST"
+    },
+    "1210": {
+      "op": "POP"
+    },
+    "1211": {
+      "op": "SUB"
+    },
+    "1212": {
+      "op": "SWAP1"
+    },
+    "1213": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "1214": {
+      "op": "JUMPDEST"
+    },
+    "1215": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "1217": {
+      "op": "DUP3"
+    },
+    "1218": {
+      "op": "NOT"
+    },
+    "1219": {
+      "op": "DUP3"
+    },
+    "1220": {
+      "op": "GT"
+    },
+    "1221": {
+      "op": "ISZERO"
+    },
+    "1222": {
+      "op": "PUSH2",
+      "value": "0x4D1"
+    },
+    "1225": {
+      "op": "JUMPI"
+    },
+    "1226": {
+      "op": "PUSH2",
+      "value": "0x4D1"
+    },
+    "1229": {
+      "op": "PUSH2",
+      "value": "0x491"
+    },
+    "1232": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "1233": {
+      "op": "JUMPDEST"
+    },
+    "1234": {
+      "op": "POP"
+    },
+    "1235": {
+      "op": "ADD"
+    },
+    "1236": {
+      "op": "SWAP1"
+    },
+    "1237": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "b7a0a14abe07194af3891c1e32f52d1ce0adf1e6",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity 0.8.11;\n\n// Minimal implementation of an ERC20 only for the purpose of this technical assignment\ncontract ERC20 {\n    // Storage variables\n    mapping(address => mapping(address => uint256)) private _allowances;\n    mapping(address => uint256) private _balances;\n\n    string public name;\n    string public symbol;\n\n    uint256 public decimals;\n    uint256 public totalSupply;\n\n    constructor(\n        string memory _name,\n        string memory _symbol,\n        uint256 _decimals\n    ) {\n        name = _name;\n        symbol = _symbol;\n        decimals = _decimals;\n    }\n\n    // NOTE: For the purposes of this technical assignment anyone can mint the tokens\n    function mint(uint256 amount) public {\n        _balances[msg.sender] += amount;\n        totalSupply += amount;\n    }\n\n    function balanceOf(address account) external view returns (uint256) {\n        return _balances[account];\n    }\n\n    function transfer(address to, uint256 amount) external returns (bool) {\n        _transfer(msg.sender, to, amount);\n        return true;\n    }\n\n    function transferFrom(\n        address from,\n        address to,\n        uint256 amount\n    ) external returns (bool) {\n        // spend the allowance\n        _allowances[from][msg.sender] -= amount;\n        _transfer(from, to, amount);\n        return true;\n    }\n\n    function _transfer(\n        address from,\n        address to,\n        uint256 amount\n    ) internal {\n        uint256 _fromBalance = _balances[from];\n        require(\n            _fromBalance >= amount,\n            \"ERC20: transfer amount exceeds balance\"\n        );\n        unchecked {\n            _balances[from] = _fromBalance - amount;\n        }\n        _balances[to] += amount;\n    }\n}\n",
+  "sourceMap": "145:1610:0:-:0;;;429:190;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;544:12;;;;:4;;:12;;;;;:::i;:::-;-1:-1:-1;566:16:0;;;;:6;;:16;;;;;:::i;:::-;-1:-1:-1;592:8:0;:20;-1:-1:-1;145:1610:0;;-1:-1:-1;145:1610:0;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;145:1610:0;;;-1:-1:-1;145:1610:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;14:127:1;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:885;200:5;253:3;246:4;238:6;234:17;230:27;220:55;;271:1;268;261:12;220:55;294:13;;-1:-1:-1;;;;;356:10:1;;;353:36;;;369:18;;:::i;:::-;444:2;438:9;412:2;498:13;;-1:-1:-1;;494:22:1;;;518:2;490:31;486:40;474:53;;;542:18;;;562:22;;;539:46;536:72;;;588:18;;:::i;:::-;628:10;624:2;617:22;663:2;655:6;648:18;685:4;675:14;;730:3;725:2;720;712:6;708:15;704:24;701:33;698:53;;;747:1;744;737:12;698:53;769:1;760:10;;779:133;793:2;790:1;787:9;779:133;;;881:14;;;877:23;;871:30;850:14;;;846:23;;839:63;804:10;;;;779:133;;;930:2;927:1;924:9;921:80;;;989:1;984:2;979;971:6;967:15;963:24;956:35;921:80;1019:6;146:885;-1:-1:-1;;;;;;146:885:1:o;1036:623::-;1144:6;1152;1160;1213:2;1201:9;1192:7;1188:23;1184:32;1181:52;;;1229:1;1226;1219:12;1181:52;1256:16;;-1:-1:-1;;;;;1321:14:1;;;1318:34;;;1348:1;1345;1338:12;1318:34;1371:61;1424:7;1415:6;1404:9;1400:22;1371:61;:::i;:::-;1361:71;;1478:2;1467:9;1463:18;1457:25;1441:41;;1507:2;1497:8;1494:16;1491:36;;;1523:1;1520;1513:12;1491:36;;1546:63;1601:7;1590:8;1579:9;1575:24;1546:63;:::i;:::-;1536:73;;;1649:2;1638:9;1634:18;1628:25;1618:35;;1036:623;;;;;:::o;1664:380::-;1743:1;1739:12;;;;1786;;;1807:61;;1861:4;1853:6;1849:17;1839:27;;1807:61;1914:2;1906:6;1903:14;1883:18;1880:38;1877:161;;;1960:10;1955:3;1951:20;1948:1;1941:31;1995:4;1992:1;1985:15;2023:4;2020:1;2013:15;1877:161;;1664:380;;;:::o;:::-;145:1610:0;;;;;;",
+  "sourcePath": "contracts/ERC20.sol",
+  "type": "contract"
+}
