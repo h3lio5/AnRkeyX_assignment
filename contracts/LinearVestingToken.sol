@@ -28,7 +28,7 @@ contract LinearVestingToken {
     uint256 public scheduleId;
 
     /////////////// Custom Errors ////////
-    // They are used instead of require() statements because of deploy and runtime gas efficiency
+    // Custom errors are used instead of require() statements because of their reduced deploy and runtime gas costs
     // error MinterHasInsufficientBalance();
     error RecipientAddressNotValid();
     error RedeemerNotAuthorized();
@@ -78,7 +78,7 @@ contract LinearVestingToken {
             uint128(0)
         );
 
-        // emit the event
+        // emit the schedule creation event
         emit NewVestingScheduleCreated(
             tokenAddress,
             to,
@@ -90,6 +90,8 @@ contract LinearVestingToken {
         return _scheduleId;
     }
 
+    ///@notice function for redeeming tokens
+    ///@param _scheduleId Identifier of the vesting schedule to redeem from
     function redeem(uint256 _scheduleId) external {
         Beneficiery memory _beneficiary = schedules[_scheduleId]; // caching for saving on SLOADS
 
@@ -126,7 +128,7 @@ contract LinearVestingToken {
         }
         // Update the information related to the scheduleId in the persistent storage
         schedules[_scheduleId] = _beneficiary;
-        // emit the event
+        // emit the token redemption event
         emit BeneficieryRedeemedTokens(
             _scheduleId,
             msg.sender,
